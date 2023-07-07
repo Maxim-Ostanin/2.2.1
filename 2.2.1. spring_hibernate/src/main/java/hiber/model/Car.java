@@ -15,6 +15,7 @@ public class Car {
     @Column
     private int series;
 
+
     public Car() {
     }
 
@@ -30,6 +31,7 @@ public class Car {
                 ", series=" + series +
                 '}';
     }
+
 
     public Long getId() {
         return id;
