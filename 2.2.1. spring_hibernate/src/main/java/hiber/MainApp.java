@@ -26,18 +26,10 @@ public class MainApp {
         userService.add(new User("User4", "Lastname4", "user4@mail.ru", new Car("Model4", 4)));
 
         List<User> users = userService.listUsers();
-        for (User user : users) {
-            System.out.println("Id = " + user.getId() + "\nFirst Name = " + user.getFirstName() +
-                    "\nLast Name = " + user.getLastName() + "\nEmail = " + user.getEmail() +
-                    "\nCar = " + user.getCar() + "\n");
-        }
+        users.forEach(System.out::println);
 
         List<User> usersWithCar = userService.listUsersWithCar("Model1", 1);
-        for (User user : usersWithCar) {
-            System.out.println("Id = " + user.getId() + "\nFirst Name = " + user.getFirstName() +
-                    "\nLast Name = " + user.getLastName() + "\nEmail = " + user.getEmail() +
-                    "\nCar = " + user.getCar() + "\n");
-        }
+        usersWithCar.forEach(System.out::println);
 
         context.close();
     }
